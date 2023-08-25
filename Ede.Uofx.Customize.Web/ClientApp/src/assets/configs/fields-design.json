@@ -1,0 +1,47 @@
+{
+  "fieldGroups": [
+    {
+      "code": "group1",
+      "name": "群組一"
+    }
+  ],
+  "fields": [
+
+    {
+      "group": "group1",
+      "code": "template-field",
+      "name": "template-field",
+      "icon": "assets/icons/u-plugin-form.svg",
+      "sizeConfig": {
+        "defaultCols": 2,
+        "defaultRows": 1,
+        "minCols": 1,
+        "minRows": 1
+      }
+    },
+    {
+      "group": "group1",
+      "code": "demo-field",
+      "name": "demo-field",
+      "icon": "assets/icons/u-plugin-form.svg",
+      "sizeConfig": {
+        "defaultCols": 2,
+        "defaultRows": 1,
+        "minCols": 1,
+        "minRows": 1
+      }
+    },
+    {
+      "group": "group1",
+      "code": "hw-order-field",
+      "name": "hw-order-field",
+      "icon": "assets/icons/u-plugin-form.svg",
+      "sizeConfig": {
+        "defaultCols": 2,
+        "defaultRows": 1,
+        "minCols": 1,
+        "minRows": 1
+      }
+    }
+  ]
+}

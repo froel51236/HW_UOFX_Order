@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "c+oXInOH26ao+E2ozaQEvCRrnhoXpAvE+axHE+5YYS4=",
+  "Source": "Ede.Uofx.Customize.Web",
+  "BasePath": "_content/Ede.Uofx.Customize.Web",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Ede.Uofx.Customize.Web\\wwwroot",
+      "Source": "Ede.Uofx.Customize.Web",
+      "ContentRoot": "D:\\UOFX\\plugin-lab-master\\Ede.Uofx.Customize.Web\\wwwroot\\",
+      "BasePath": "_content/Ede.Uofx.Customize.Web",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\UOFX\\plugin-lab-master\\Ede.Uofx.Customize.Web\\wwwroot\\favicon.ico",
+      "SourceId": "Ede.Uofx.Customize.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\UOFX\\plugin-lab-master\\Ede.Uofx.Customize.Web\\wwwroot\\",
+      "BasePath": "_content/Ede.Uofx.Customize.Web",
+      "RelativePath": "favicon.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\favicon.ico"
+    }
+  ]
+}

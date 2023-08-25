@@ -1,0 +1,86 @@
+<ejs-dialog #ejDialog>
+  <ng-template #header>
+    <uofx-dialog-header>
+       <!-- Dialog 表頭顯示處理 -->
+
+     </uofx-dialog-header>
+  </ng-template>
+  <ng-template #content>
+    <uofx-dialog-body>
+      <div class="padding-3x">
+         <!-- Dialog 表身顯示處理 -->
+         <!-- 通常是放明細內容或需編輯內容-->
+         {{this.params.apiurl}}
+         <ejs-grid
+            [dataSource]="searchResult"
+            allowPaging="true"
+            [pageSettings]="initialPage">
+         <ng-template #pagerTemplate let-item>
+         <!--分頁器設定-->
+         <ejs-pager
+           #pager
+           (click)="onPagerClick($event)"
+           [currentPage]="pageModel.currentPage"
+           [pageSize]="pageModel.pageSize"
+           [pageCount]="pageModel.pageCount"
+           [totalRecordsCount]="pageModel.totalCount"
+         >
+         </ejs-pager>
+         </ng-template>
+         <!--欄位Header設定-->
+         <e-columns>
+             <e-column
+               field="欄位ID"
+              headerText="公司名稱"
+               width="150"
+             ></e-column>
+             <e-column
+               field="欄位ID"
+              headerText="地址"
+               width="150"
+             ></e-column>
+             <e-column
+             field="欄位ID"
+            headerText="電話"
+             width="150"
+           ></e-column>
+           <e-column field="options" headerText="" width="80"> </e-column>
+           </e-columns>
+         <!--欄位Row樣板設定-->
+         <ng-template #rowTemplate let-item>
+             <tr>
+               <td >
+                {{ item.companyName }}
+               </td>
+               <td >
+                {{ item.address }}
+               </td>
+               <td >
+                {{ item.phone }}
+               </td>
+               <td class="action">
+                 <button
+                   class="row-hover-shown e-btn u-btn-second"
+                   (click)="selectItem(item)">
+                   選擇
+                 </button>
+               </td>
+             </tr>
+           </ng-template>
+         </ejs-grid>
+      </div>
+    </uofx-dialog-body>
+  </ng-template>
+  <ng-template #footerTemplate>
+    <uofx-dialog-footer>
+         <!-- Dialog 表尾顯示處理 -->
+         <!-- 通常是放Button(EX:確定、關閉視窗.....) -->
+         <button
+            class="e-btn u-btn-primary buttons-opposite"
+             data-ripple="true"
+            (click)="DoClose()">
+            關閉視窗
+          </button>
+    </uofx-dialog-footer>
+  </ng-template>
+</ejs-dialog>

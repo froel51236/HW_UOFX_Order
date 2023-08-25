@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Ede.Uofx.Customize.Web.props" />
+</Project>

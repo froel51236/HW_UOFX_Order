@@ -1,0 +1,8 @@
+{
+"SpaProxyServer": {
+"ServerUrl": "http://localhost:40001",
+"LaunchCommand": "npm start",
+"WorkingDirectory": "D:\\UOFX\\plugin-lab-master\\Ede.Uofx.Customize.Web\\ClientApp\\",
+"MaxTimeoutInSeconds": "120"
+}
+}

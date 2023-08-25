@@ -1,0 +1,47 @@
+<div>
+  <uofx-form-field-name [name]="name" [required]="required">
+  </uofx-form-field-name>
+</div>
+<div class="fw-control">
+  <table [formGroup]="form" style="width: 90%;">
+    <tr>
+      <th></th>
+      <td>
+        <p *ngIf="editable" style="text-align: center;">
+          <button
+             class="e-btn u-btn-primary buttons-opposite"
+              data-ripple="true"
+             (click)="onOpen()">請選擇
+           </button>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <th><span>FirstName</span></th>
+      <td>
+        <ejs-textbox *ngIf="editable" formControlName="firstName"></ejs-textbox>
+        <span *ngIf="!editable">{{ value.firstName }}</span>
+        <ejs-textbox style="display: none;" formControlName="employeeID"></ejs-textbox>
+        <span *ngIf="!editable">{{ value.employeeID }}</span>
+        <uofx-form-error-tip [control]="form?.controls.firstName">
+        </uofx-form-error-tip>
+      </td>
+    </tr>
+    <tr>
+      <th><span>Title</span></th>
+      <td>
+        <ejs-textbox *ngIf="editable" formControlName="title"></ejs-textbox>
+        <span *ngIf="!editable">{{ value.title }}</span>
+      </td>
+    </tr>
+    <tr>
+      <th><span>Home Phone</span></th>
+      <td>
+        <ejs-textbox *ngIf="editable" formControlName="homePhone"></ejs-textbox>
+        <span *ngIf="!editable">{{ value.homePhone }}</span>
+      </td>
+    </tr>
+  </table>
+</div>
+
+

@@ -1,0 +1,27 @@
+{
+
+  "template-field": {
+    "exposedModule": "./TemplateField",
+    "moduleName": "TemplateFieldModule",
+    "app": {
+      "exposedModule": "./TemplateField",
+      "moduleName": "FieldHelloWorldAppModule"
+    }
+  },
+  "demo-field": {
+    "exposedModule": "./DemoField",
+    "moduleName": "DemoFieldModule",
+    "app": {
+      "exposedModule": "./DemoField",
+      "moduleName": "FieldHelloWorldAppModule"
+    }
+  },
+  "hw-order-field": {
+    "exposedModule": "./HwOrderField",
+    "moduleName": "HwOrderFieldModule",
+    "app": {
+      "exposedModule": "./HwOrderField",
+      "moduleName": "FieldHelloWorldAppModule"
+    }
+  }
+}

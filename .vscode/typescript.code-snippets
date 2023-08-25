@@ -1,0 +1,142 @@
+{
+  "Create dialog constructor": {
+    "prefix": "x-dialog-constructor",
+    "body": [
+      "import { Component } from \"@angular/core\";",
+      "import { FormDirtyConfirm } from \"@uofx/core\";",
+      "import { UofxDialog, UofxDialogController } from \"@uofx/web-components/dialog\";",
+      "",
+      "@Component({",
+      " selector: 'component-selector',",
+      " templateUrl: './current.dialog.html',",
+      " styleUrls: ['./current.dialog.scss']",
+      "})",
+      "export class ComponentDialog extends UofxDialog {",
+      "   constructor(private dialogCtrl: UofxDialogController) {",
+      "     super();",
+      "   }",
+      "}"
+    ],
+    "description": "建立Dialog 需import、implements、constructor樣板"
+  },
+  "Dialog Create": {
+    "prefix": "x-dialogCtrl create",
+    "body": [
+      "this.dialogCtrl.create({",
+      "  component: ComponentDialog,",
+      "  size: 'large',",
+      "  params: {",
+      "    ${1} /*開窗要帶的參數*/",
+      "  }",
+      "}).afterClose.subscribe({",
+      "  next: res => {",
+      "  /*關閉視窗後處理的訂閱事件*/",
+      "  if (res) { ${2} }",
+      "}",
+      "});"
+    ],
+    "description": "建立DialogCreate開窗様板"
+  },
+  "Dialog Create FullScreen": {
+    "prefix": "x-dialogCtrl createFullScreen",
+    "body": [
+      "this.dialogCtrl.createFullScreen({",
+      "  component: ComponentDialog,",
+      "  params: {",
+      "    ${1} /*開窗要帶的參數*/",
+      "  }",
+      "}).afterClose.subscribe({",
+      "  next: res => {",
+      "  /*關閉視窗後處理的訂閱事件*/",
+      "  if (res) { ${2} }",
+      "}",
+      "});"
+    ],
+    "description": "建立DialogCreateet滿版開窗様板"
+  },
+  "Dialog Create FlexibleScreen": {
+    "prefix": "x-dialogCtrl createFlexibleScreen",
+    "body": [
+      "this.dialogCtrl.createFlexibleScreen({",
+      "  component: ComponentDialog,",
+      "  params: {",
+      "    ${1} /*開窗要帶的參數*/",
+      "  }",
+      "}).afterClose.subscribe({",
+      "  next: res => {",
+      "  /*關閉視窗後處理的訂閱事件*/",
+      "  if (res) { ${2} }",
+      "}",
+      "});"
+    ],
+    "description": "建立DialogCreateet90%滿版開窗様板"
+  }
+  ,
+  "Grid Import": {
+    "prefix": "x-Grid import",
+    "body": [
+      "import {",
+      "  Grid,",
+      "  GridComponent,",
+      " PageSettingsModel,",
+      "} from '@syncfusion/ej2-angular-grids';"
+    ],
+    "description": "使用Grid需import清單"
+  }
+  ,
+  "Grid Pager Implement": {
+    "prefix": "x-Grid Pager implement",
+    "body": [
+      "/*any 為grid item的inerface物件*/",
+      "  searchResult: Array<any> = [];",
+      "/*searchResult Bind完後記得要再重設資料筆數*/",
+      "/*this.pageModel.totalCount = this.searchResult.length; */",
+      "pageModel = { currentPage: 1, pageCount: 5, pageSize: 10, totalCount: 40 };",
+      "initialPage = <PageSettingsModel>{",
+      "  currentPage: 1,",
+      "  pageCount: 2,",
+      "  pageSize: 10,",
+      "  totalRecordsCount: 20,",
+      "};",
+      "",
+      "/*分頁器事件*/",
+      "onPagerClick(event) {",
+      "  if (event.isTrusted) return;",
+      "  if (this.pageModel.currentPage === event.currentPage) return;",
+      "",
+      "  this.pageModel.currentPage = event.currentPage;",
+      "",
+      "  this.initialPage = <PageSettingsModel>{",
+      "    currentPage: event.currentPage,",
+      "    pageCount: 2,",
+      "    pageSize: 10,",
+      "    totalRecordsCount: 20,",
+      "  };",
+      "}"
+
+    ],
+    "description": "使用Grid分頁器所實作項目"
+  }
+  ,
+  "X CreateService": {
+    "prefix": "x-CreateService",
+    "body": [
+      "import { BasicApiService } from \"./basic-api.service\";",
+      "import { Injectable } from \"@angular/core\";",
+      "",
+      "//記得要在外掛欄位Module的BASIC_SERVICES注入Service",
+      "",
+      "@Injectable()",
+      "export class ServiceName extends BasicApiService {",
+      "",
+      "",
+      "get() {",
+      "  return this.http.get<any>(\"URL\");",
+      "};",
+     
+      "}"
+
+    ],
+    "description": "建立服務器樣板"
+  }
+}

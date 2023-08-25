@@ -1,0 +1,13 @@
+{
+  "name": "UOF X 外掛模組",
+  "code": "Ede.Develop",
+  "description": "新一代 UOF X 外掛模組",
+  "manufacturerCode": "Ede",
+  "manufacturer": "一等一科技",
+  "vers": [
+    {
+      "version": "1.0",
+      "dependencyVersion": "*"
+    }
+  ]
+}
